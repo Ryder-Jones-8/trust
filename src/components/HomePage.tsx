@@ -236,10 +236,10 @@ const HomePage = () => {
             {/* Center stringer line */}
             <path d="M12 3 L12 20" strokeWidth="0.5"/>
           </IconSvg>
-        </SportIcon>        {/* Snowflake Icon - Bottom Left */}        <SportIcon 
+        </SportIcon>        {/* Ski Icon - Bottom Left */}        <SportIcon 
           position="bottom-left" 
-          onClick={() => handleSportClick('snow')}
-          title="snow"
+          onClick={() => handleSportClick('ski')}
+          title="ski"
         >
           <IconSvg viewBox="0 0 24 24">
             {/* Main cross lines */}

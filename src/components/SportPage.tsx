@@ -94,14 +94,6 @@ const sportCategories = {
     { name: 'Helmets', icon: '⛑️' },
     { name: 'Goggles', icon: '🥽' }
   ],
-  snow: [
-    { name: 'Snowboards', icon: '🏂' },
-    { name: 'Skis', icon: '⛷️' },
-    { name: 'Snowboard Boots', icon: '🥾' },
-    { name: 'Ski Boots', icon: '👢' },
-    { name: 'Helmets', icon: '⛑️' },
-    { name: 'Goggles', icon: '🥽' }
-  ],
   skate: [
     { name: 'Decks', icon: '🛹' },
     { name: 'Trucks', icon: '🔧' },

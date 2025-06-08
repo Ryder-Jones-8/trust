@@ -209,9 +209,14 @@ interface ShopSettings {
   phone: string;
   email: string;
   website: string;
+  location?: string;
   acceptsRecommendations: boolean;
   autoNotifyLowStock: boolean;
   lowStockThreshold: number;
+  enableInventoryAlerts?: boolean;
+  enableEmailNotifications?: boolean;
+  enableSMSNotifications?: boolean;
+  businessHours?: string;
 }
 
 const ShopSettings: React.FC = () => {
@@ -339,7 +344,6 @@ const ShopSettings: React.FC = () => {
       setIsLoading(false);
     }
   };
-
   const handleDeleteAccount = async () => {
     const confirmation = prompt('Type "DELETE" to confirm account deletion:');
     if (confirmation !== 'DELETE') {
@@ -351,7 +355,6 @@ const ShopSettings: React.FC = () => {
     }
 
     try {
-      const token = localStorage.getItem('token');
       // In a real app, this would call the delete account API
       console.log('Account deletion requested');
       
