@@ -56,6 +56,17 @@ A tablet-based platform designed specifically for surf, ski, and skate shops to 
 
 4. Open your browser and navigate to `http://localhost:5173` (or the port shown in terminal)
 
+### Backend Setup
+
+1. Navigate to the `backend` directory
+2. Install backend dependencies and start the server:
+   ```bash
+   cd backend
+   npm install
+   npm start
+   ```
+3. See `backend/SETUP_README.md` for database configuration
+
 ### Available Scripts
 
 - `npm run dev` - Start development server
@@ -139,8 +150,8 @@ The platform follows a minimalist design approach with:
 
 ## Future Enhancements
 
-- Backend API integration for real shop inventory
 - User profile management and saved preferences
 - Advanced filtering and sorting options
 - Shop admin dashboard for inventory management
 - Integration with point-of-sale systems
+- Backend setup included. See `backend/SETUP_README.md` for details
