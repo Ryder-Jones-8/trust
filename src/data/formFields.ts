@@ -1,5 +1,5 @@
 // Shared form field definitions to reduce duplication
-import type { FormField } from '../types'
+import type { FormField, CategoryForms } from '../types'
 
 // Common fields that are reused across categories
 export const commonFields = {
@@ -32,7 +32,7 @@ export const commonFields = {
 }
 
 // Category-specific form configurations
-export const categoryForms = {
+export const categoryForms: CategoryForms = {
   surf: {
     boards: [
       commonFields.height,
