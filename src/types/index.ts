@@ -76,3 +76,21 @@ export interface CategoryForms {
     [category: string]: FormField[];
   };
 }
+
+// Shop Settings interface
+export interface ShopSettings {
+  shopName: string;
+  description: string;
+  address: string;
+  phone: string;
+  email: string;
+  website: string;
+  location?: string;
+  acceptsRecommendations: boolean;
+  autoNotifyLowStock: boolean;
+  lowStockThreshold: number;
+  enableInventoryAlerts?: boolean;
+  enableEmailNotifications?: boolean;
+  enableSMSNotifications?: boolean;
+  businessHours?: string;
+}

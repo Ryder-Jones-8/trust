@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import type { FormField, CategoryForms } from '../types'
+import type { FormField } from '../types'
+import { categoryForms } from '../data/formFields'
 
 const CategoryContainer = styled.div`
   min-height: 100vh;
@@ -145,6 +146,8 @@ interface FormData {
   [key: string]: string | number
 }
 
+<<<<<<< HEAD
+=======
 const categoryForms: CategoryForms = {
   surf: {
     boards: [
@@ -296,12 +299,21 @@ const categoryForms: CategoryForms = {
   }
 }
 
+>>>>>>> e0571f859ed030f0855cfb9d117667c23f2313ce
 const CategoryPage = () => {
   const { sport, category } = useParams<{ sport: string; category: string }>()
   const navigate = useNavigate()
   const [formData, setFormData] = useState<FormData>({})
-  const formFields: FormField[] = sport && category ? 
-    categoryForms[sport]?.[category] || [] : []
+  
+  // Type-safe access to categoryForms
+  const getFormFields = (): FormField[] => {
+    if (!sport || !category) return []
+    const sportForms = (categoryForms as any)[sport]
+    if (!sportForms) return []
+    return sportForms[category] || []
+  }
+  
+  const formFields: FormField[] = getFormFields()
 
   const handleInputChange = (name: string, value: string) => {
     setFormData(prev => ({
