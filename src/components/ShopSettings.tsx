@@ -363,7 +363,7 @@ const ShopSettings: React.FC = () => {
       localStorage.removeItem('shopOwner');
       localStorage.removeItem('shopSettings');
       navigate('/');
-    } catch (error) {
+    } catch {
       setMessage({ type: 'error', text: 'Failed to delete account. Please contact support.' });
     }
   };

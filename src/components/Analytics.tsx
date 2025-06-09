@@ -231,7 +231,8 @@ const Analytics: React.FC = () => {
         const data = await response.json();
         
         // Create mock top products from category breakdown
-        const topProducts = Object.entries(data.categoryBreakdown || {}).map(([category, stats]: [string, any], index) => ({
+        const entries = Object.entries(data.categoryBreakdown || {}) as [string, { count: number; value: number }][];
+        const topProducts = entries.map(([category, stats], index) => ({
           id: (index + 1).toString(),
           name: `Top ${category} Product`,
           category: category,
