@@ -1,0 +1,25 @@
+[
+  {
+    "id": "item1",
+    "kind": "LR",
+    "question": "Which one of the following most accurately expresses the main point of the argument?",
+    "choices": ["A", "B", "C", "D", "E"],
+    "answer": "C",
+    "explanation": "Explanation for item1.",
+    "whyWrong": ["A is wrong because...", "B is wrong because..."],
+    "tags": ["main point", "argument"],
+    "meta": {"difficulty": "medium"}
+  },
+  {
+    "id": "item2",
+    "kind": "RC",
+    "passage": "Reading passage text.",
+    "question": "What is the author's attitude?",
+    "choices": ["Positive", "Negative", "Neutral"],
+    "answer": "Neutral",
+    "explanation": "Explanation for item2.",
+    "whyWrong": ["Positive is wrong because...", "Negative is wrong because..."],
+    "tags": ["attitude", "author"],
+    "meta": {"difficulty": "easy"}
+  }
+]

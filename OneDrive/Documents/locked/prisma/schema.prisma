@@ -1,0 +1,45 @@
+// Prisma schema for lsat-lab
+// Models: Item, Attempt, Scheduler
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Item {
+  id          String   @id
+  kind        String
+  stimulus    String?
+  passage     String?
+  question    String
+  choices     Json
+  answer      String
+  explanation String
+  whyWrong    Json
+  tags        Json
+  meta        Json?
+  attempts    Attempt[]
+  scheduler   Scheduler?
+}
+
+model Attempt {
+  id         String   @id @default(cuid())
+  itemId     String
+  correct    Boolean
+  timeSec    Int
+  confidence Int
+  createdAt  DateTime @default(now())
+  item       Item     @relation(fields: [itemId], references: [id])
+}
+
+model Scheduler {
+  itemId     String   @id
+  nextReview DateTime
+  stability  Float
+  difficulty Float
+  item       Item     @relation(fields: [itemId], references: [id])
+}
